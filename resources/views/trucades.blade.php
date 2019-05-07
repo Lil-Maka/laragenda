@@ -1,0 +1,1 @@
+trucades.blade.php

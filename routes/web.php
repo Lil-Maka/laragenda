@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('totes', 'PaginesController@entrades');
+Route::get('trucades', 'PaginesController@trucades');
+Route::get('missatges', 'PaginesController@missatges');
+Route::get('reunions', 'PaginesController@reunions');
+Route::get('login', 'PaginesController@login');
+Route::get('/', 'PaginesController@login');
+Route::get('registre', 'PaginesController@registre');
 
-Route::get('/', function () {
-    return view('welcome');
-});
