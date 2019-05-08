@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('totes', 'PaginesController@entrades');
-Route::get('trucades', 'PaginesController@trucades');
-Route::get('missatges', 'PaginesController@missatges');
-Route::get('reunions', 'PaginesController@reunions');
-Route::get('login', 'PaginesController@login');
-Route::get('/', 'PaginesController@login');
-Route::get('registre', 'PaginesController@registre');
+Route::get('totes', 'PaginesController@entrades')->name('totes');
+Route::get('/', 'PaginesController@entrades')->name('totes');
+Route::get('trucades', 'PaginesController@trucades')->name('trucades');
+Route::get('missatges', 'PaginesController@missatges')->name('missatges');
+Route::get('reunions', 'PaginesController@reunions')->name('reunions');
+Route::get('login', 'PaginesController@login')->name('login');
+Route::get('registre', 'PaginesController@registre')->name('registre');
 
