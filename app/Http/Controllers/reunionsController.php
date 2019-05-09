@@ -29,6 +29,6 @@ class reunionsController extends Controller
     		'data_reunio' => request('data_reunio'),
     		'entrada_id' => $id
     	]);
-    	return redirect('trucades');
+    	return redirect('reunions');
     }
 }

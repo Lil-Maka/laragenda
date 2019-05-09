@@ -1,7 +1,7 @@
 <div class="container" style="margin-bottom: 5%; margin-top:2%;">
 		<div class="info">
 		 <div class="col-md-12">
-			<div class="row">
+			<div class="row" style="height:50px; line-height:50px;">
 				<div class="col-md-3 bg-info" style="border: 1px solid black; border-bottom: none;">
 					Prueba
 				</div>
