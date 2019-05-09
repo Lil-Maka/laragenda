@@ -4,6 +4,14 @@
 		Reunió
 	@endsection
 	@section('contingut')
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut expedita ratione voluptas numquam velit recusandae debitis deleniti laboriosam dicta ipsa magni totam eos cupiditate facilis, voluptatibus, illo ipsum amet quam.
+		@foreach($reunions as $reunio)
+			{{$reunio->entrada->descripcio}}
+			{{$reunio->entrada->created_at}}
+			{{$reunio->titol}}
+			{{$reunio->lloc}}
+			{{$reunio->durada}}
+			{{$reunio->data_reunio}}
+			<hr>
+		@endforeach
 	@endsection
 @endsection

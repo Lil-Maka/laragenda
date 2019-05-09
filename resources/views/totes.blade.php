@@ -4,6 +4,23 @@
 		Entrades
 	@endsection
 	@section('contingut')
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut expedita ratione voluptas numquam velit recusandae debitis deleniti laboriosam dicta ipsa magni totam eos cupiditate facilis, voluptatibus, illo ipsum amet quam.
+		@foreach($entrades as $entrada)
+			{{$entrada->descripcio}}
+			{{$entrada->created_at}}
+			@if($entrada->reunios != "[]")
+				{{$entrada->reunios}}
+			@endif
+			@if($entrada->trucadas != "[]")
+				{{$entrada->trucadas}}
+			@endif
+			{{--{{$entrada->numero}}
+			{{$entrada->trucadas->tipus}}
+			{{$entrada->trucadas->dispositiu}}
+			{{$entrada->trucadas->lloc_trucada}}--}}
+			@if($entrada->missatges != "[]")
+				{{$entrada->missatges}}
+			@endif
+			<hr>
+		@endforeach
 	@endsection
 @endsection

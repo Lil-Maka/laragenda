@@ -4,6 +4,12 @@
 		Missatges
 	@endsection
 	@section('contingut')
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut expedita ratione voluptas numquam velit recusandae debitis deleniti laboriosam dicta ipsa magni totam eos cupiditate facilis, voluptatibus, illo ipsum amet quam.
+		@foreach($missatges as $missatge)
+			{{$missatge->entrada->descripcio}}
+			{{$missatge->entrada->created_at}}
+			{{$missatge->titol}}
+			{{$missatge->prioritat}}
+			<hr>
+		@endforeach
 	@endsection
 @endsection

@@ -3,20 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Entrada;
+use App\Trucada;
+use App\Missatge;
+use App\Reunio;
 class PaginesController extends Controller
 {
     public function entrades(){
-    	return view('totes');
+        $entrades = Entrada::all();
+    	return view('totes', compact('entrades'));
     }
     public function trucades(){
-    	return view('trucades');
+        $trucades = Trucada::all();
+    	return view('trucades', compact('trucades'));
     }
     public function missatges(){
-    	return view('missatges');
+        $missatges = Missatge::all();
+    	return view('missatges', compact('missatges'));
     }
     public function reunions(){
-    	return view('reunio');
+        $reunions = Reunio::all();
+    	return view('reunio', compact('reunions'));
     }
     public function login(){
     	return view('login');
